@@ -1,0 +1,20 @@
+{
+    "products":[
+        {
+        "id": 1,
+        "name": "iPhone 12 Pro",
+        "description": "Apple iPnone 12th generation",
+        "price": 999,
+        "image":
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfOEAMXEdYwfQ8PLARdWp5wwpSvNKTg3Vv7A&usqp=CAU"
+        },
+        {
+        "id": 2,
+        "name": "Samsung Galaxy S22 ultra",
+        "description": "Mobile Galaxy S22 2nd Generation",
+        "price": 299,
+        "image":
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREL0YMrf670cJyq2SFBNuO_-WsaLvPkvCO2Q&usqp=CAU"
+        }
+    ]
+}
