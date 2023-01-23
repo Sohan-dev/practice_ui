@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:practice_ui/screens/Signup.dart';
 
 import '../utils/routes.dart';
 
@@ -137,7 +138,12 @@ class _LoginState extends State<Login> {
                     splashColor: Colors.blue,
                     onTap: () {
                       {
-                        Navigator.pushNamed(context, MyRoutes.signupRoute);
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => Signup(
+                                      name: email,
+                                    )));
                       }
                     },
                     enableFeedback: true,

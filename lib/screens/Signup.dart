@@ -4,7 +4,11 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:practice_ui/utils/routes.dart';
 
 class Signup extends StatefulWidget {
-  const Signup({super.key});
+  final String name;
+  const Signup({
+    Key? key,
+    required this.name,
+  }) : super(key: key);
 
   @override
   State<Signup> createState() => _SignupState();
@@ -16,16 +20,17 @@ class _SignupState extends State<Signup> {
   final _formKey = GlobalKey<FormState>();
 
   signup(BuildContext context) async {
-    if (_formKey.currentState!.validate()) {
-      setState(() {
-        changeButton = true;
-      });
-      await Future.delayed(const Duration(seconds: 1));
-      await Navigator.pushNamed(context, MyRoutes.homeRoute);
-      setState(() {
-        changeButton = false;
-      });
-    }
+    // if (_formKey.currentState!.validate()) {
+    //   setState(() {
+    //     changeButton = true;
+    //   });
+    //   await Future.delayed(const Duration(seconds: 1));
+    //   await Navigator.pushNamed(context, MyRoutes.homeRoute);
+    //   setState(() {
+    //     changeButton = false;
+    //   });
+    // }
+    print(widget.name.toString());
   }
 
   @override
@@ -41,10 +46,10 @@ class _SignupState extends State<Signup> {
               alignment: Alignment.center,
               child: Column(
                 children: [
-                  const Padding(
+                  Padding(
                     padding: EdgeInsets.only(top: 50.0, bottom: 50.0),
                     child: Text(
-                      'Here we need some details about you',
+                      '${widget.name.toString()} Here we need some details about you',
                       textAlign: TextAlign.center,
                       style: TextStyle(
                         fontWeight: FontWeight.bold,

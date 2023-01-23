@@ -3,6 +3,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:practice_ui/screens/Home.dart';
 import 'package:practice_ui/screens/Login.dart';
 import 'package:practice_ui/screens/Signup.dart';
+import 'package:practice_ui/screens/Splash.dart';
 import 'package:practice_ui/utils/routes.dart';
 import 'package:practice_ui/widget/theme.dart';
 
@@ -21,12 +22,12 @@ class MyApp extends StatelessWidget {
       theme: MyTheme.lightThemeData(context),
       debugShowCheckedModeBanner: false,
       darkTheme: ThemeData(brightness: Brightness.light),
-      initialRoute: MyRoutes.homeRoute,
+      initialRoute: MyRoutes.splashRoute,
       routes: {
-        '/': (context) => Home(),
+        '/': (context) => Splash(),
         MyRoutes.loginRoute: (context) => Login(),
         MyRoutes.homeRoute: (context) => Home(),
-        MyRoutes.signupRoute: (context) => Signup(),
+        // MyRoutes.signupRoute: (context) => Signup(),
       },
     );
   }

@@ -4,6 +4,7 @@ import 'package:flutter/services.dart';
 import 'dart:convert';
 import 'package:practice_ui/models/catalog.dart';
 import 'package:practice_ui/widget/drawer.dart';
+import 'package:convex_bottom_bar/convex_bottom_bar.dart';
 
 import '../widget/item_widget.dart';
 
@@ -59,6 +60,16 @@ class _HomeState extends State<Home> {
               : const Center(
                   child: CircularProgressIndicator(),
                 ),
+        ),
+        bottomNavigationBar: ConvexAppBar(
+          items: [
+            TabItem(icon: Icons.home, title: 'Home'),
+            TabItem(icon: Icons.map, title: 'Discovery'),
+            TabItem(icon: Icons.add, title: 'Add'),
+            TabItem(icon: Icons.message, title: 'Message'),
+            TabItem(icon: Icons.people, title: 'Profile'),
+          ],
+          onTap: (int i) => print('click index=$i'),
         ));
   }
 }
