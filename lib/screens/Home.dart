@@ -34,8 +34,6 @@ class _HomeState extends State<Home> {
         List.from(productsData).map<Item>((i) => Item.fromMap(i)).toList();
 
     setState(() {});
-
-    // print(productsData);
   }
 
   @override
